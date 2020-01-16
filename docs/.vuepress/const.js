@@ -1,6 +1,6 @@
 exports.DailyCodingList = [
-	//'Daily_Coding/index'
+	'Daily_Coding/index'
 ]
 exports.DatastructureAndAlgorithmList = [
-	//'Datastructure_And_Algorithm/index'
+	'Datastructure_And_Algorithm/index'
 ]

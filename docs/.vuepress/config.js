@@ -5,6 +5,7 @@ module.exports = {
 	description: 'personal technology wiki',
 	base: "/techArchive/",
 	themeConfig: {
+		smoothScroll: true,
 		sidebar: [
 			{
 				title: 'Datastructure And Algorithm',
