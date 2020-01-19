@@ -5,7 +5,8 @@ var octicons = require('octicons');
 module.exports = {
  	title: 'JK\'s Tech Archive',
 	description: 'personal technology wiki',
-	base: "/techArchive/",
+    base: "/techArchive/",
+    dest: "build",
 	markdown: {
 		anchor: {
 			permalink: true, permalinkBefore: true, permalinkSymbol: octicons.link.toSVG()
