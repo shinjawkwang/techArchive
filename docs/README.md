@@ -1,11 +1,11 @@
 ---
 home: true
 heroImage: /logo_circle.png
-heroText: Tech Archive 한글 테스트
+heroText: Tech Archive
 actionText: Unarchive →
 actionLink: /index/
 tagline: finding visionary of life
-layout: custome-home-layout
+layout: custom-home-layout
 features:
 - title: datastructure and algorithm
   details: 기억해둬야 할 자료구조, 알고리즘 이론 및 수도코드를 저장합니다. 사용할 만한 모든 자료구조와 알고리즘을 저장하는게 궁극적인 목표이지만, 문제해결 중 잘 모르거나 공부하는 것들 위주로 차곡차곡 쌓아갈 예정입니다.

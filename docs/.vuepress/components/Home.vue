@@ -22,7 +22,6 @@
         />
       </p>
     </header>
-		<Content class="theme-default-content custom"/>
     <div
       class="features"
       v-if="data.features && data.features.length"
@@ -36,7 +35,7 @@
         <p>{{ feature.details }}</p>
       </div>
     </div>
-
+    <Content class="theme-default-content custom"/>
     <div
       class="footer"
       v-if="data.footer"
