@@ -1,14 +1,21 @@
 var CONST = require("./const");
+const feather = require('feather-icons');
+var octicons = require('octicons');
 
 module.exports = {
  	title: 'JK\'s Tech Archive',
 	description: 'personal technology wiki',
 	base: "/techArchive/",
+	markdown: {
+		anchor: {
+			permalink: true, permalinkBefore: true, permalinkSymbol: octicons.link.toSVG()
+		}
+	},
 	themeConfig: {
 		smoothScroll: true,
 		sidebar: [
 			{
-				title: 'Datastructure And Algorithm',
+				title: 'Datastructure and Algorithm',
 				children: CONST.DatastructureAndAlgorithmList
 			}, {
 				title: 'Daily Coding',
