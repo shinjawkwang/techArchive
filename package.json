@@ -2,5 +2,10 @@
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs"
+  },
+  "dependencies": {
+    "feather-icons": "^4.25.0",
+    "octicons": "^8.5.0",
+    "vuepress": "^1.2.0"
   }
 }
