@@ -1,6 +1,8 @@
 var CONST = require("./const");
-const feather = require('feather-icons');
+var fs = require("fs");
+//const feather = require('feather-icons');
 var octicons = require('octicons');
+console.log(CONST);
 
 module.exports = {
  	title: 'JK\'s Tech Archive',
@@ -14,17 +16,10 @@ module.exports = {
 	},
 	themeConfig: {
 		smoothScroll: true,
-		sidebar: [
-			{
-				title: 'Datastructure and Algorithm',
-				children: CONST.DatastructureAndAlgorithmList
-			}, {
-				title: 'Daily Coding',
-				children: CONST.DailyCodingList
-			}
-		],
+        sidebar: CONST.sidebar,
     	nav: [
-			{ text: 'Home', link: '/' },
+            { text: 'Home', link: '/' },
+            { text: 'Archive', link: '/index/' },
 			{ text: 'GitHub', link: 'https://github.com/shinjawkwang/' }
 		]
   	}
