@@ -12,7 +12,8 @@ module.exports = {
 	markdown: {
 		anchor: {
 			permalink: true, permalinkBefore: true, permalinkSymbol: octicons.link.toSVG()
-		}
+        },
+        lineNumbers: true
 	},
 	themeConfig: {
 		smoothScroll: true,
