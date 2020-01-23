@@ -4,6 +4,7 @@
     "build": "vuepress build docs"
   },
   "dependencies": {
+    "@vuepress/plugin-last-updated": "^1.2.0",
     "feather-icons": "^4.25.0",
     "octicons": "^8.5.0",
     "vuepress": "^1.2.0"

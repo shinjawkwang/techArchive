@@ -31,5 +31,6 @@ module.exports = {
             { text: 'Archive', link: '/index/' },
 			{ text: 'GitHub', link: 'https://github.com/shinjawkwang/' }
 		]
-  	}
+      },
+      plugins: ['@vuepress/last-updated']
 }
