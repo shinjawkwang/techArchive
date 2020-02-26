@@ -24,13 +24,16 @@ module.exports = {
         lineNumbers: true
 	},
 	themeConfig: {
-		smoothScroll: true,
+	    smoothScroll: true,
         sidebar: CONST.sidebar,
     	nav: [
             { text: 'Home', link: '/' },
             { text: 'Archive', link: '/index/' },
 			{ text: 'GitHub', link: 'https://github.com/shinjawkwang/' }
 		]
-      },
-      plugins: ['@vuepress/last-updated']
+    },
+    plugins: ['@vuepress/last-updated'],
+    locales: {
+        '/': { lang: 'ko-KR' }
+    },
 }
