@@ -32,7 +32,9 @@ module.exports = {
 			{ text: 'GitHub', link: 'https://github.com/shinjawkwang/' }
 		]
     },
-    plugins: ['@vuepress/last-updated'],
+    plugins: ['@vuepress/last-updated',
+              '@vuepress/plugin-google-analytics'
+             ],
     locales: {
         '/': { lang: 'ko-KR' }
     },
