@@ -36,5 +36,5 @@ module.exports = {
     locales: {
         '/': { lang: 'ko-KR' }
     },
-    ga: '{}'
+    ga: '{UA-159126573-1}'
 }
