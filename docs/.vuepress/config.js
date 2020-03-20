@@ -2,6 +2,7 @@ var CONST = require("./const");
 var fs = require("fs");
 //const feather = require('feather-icons');
 var octicons = require('octicons');
+const sidebar = require('vuepress-auto-sidebar')
 console.log(CONST);
 
 module.exports = {
@@ -21,6 +22,7 @@ module.exports = {
 	themeConfig: {
 	    smoothScroll: true,
         sidebar: CONST.sidebar,
+        // sidebar: sidebar.getSidebar(),
     	nav: [
             { text: 'Home', link: '/' },
             { text: 'Archive', link: '/index/' },
