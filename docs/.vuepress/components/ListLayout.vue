@@ -122,8 +122,18 @@ export default {
 
 <style lang="stylus">
 #base-list-layout
-    width 40%
-    padding-top 7rem
+    @media screen and (min-width: 1500px)
+        padding-top 5%
+        width 40%
+    @media screen and (max-width: 1499px) and (min-width: 1000px)
+        padding-top 7%
+        width 50%
+    @media screen and (max-width: 999px) and (min-width: 700px)
+        width 80%
+    @media screen and (max-width: 699px)
+        padding-top 15%
+        width 90%
+    padding-top 10%
     margin 0 auto
 .common-layout
   .content-wrapper
