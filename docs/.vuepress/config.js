@@ -39,7 +39,7 @@ module.exports = {
                             path: "/daily-coding/",
                             itemPermalink: "/daily-coding/:year/:month/:day/:slug",
                             pagination: {
-                                lengthPerPage: 30,
+                                lengthPerPage: 50,
                             },
                         },
                         {
@@ -53,7 +53,17 @@ module.exports = {
                             },
                         }
                     ],
-                    globalPagination: true,
+                    comment: {
+                        service: 'vssue',
+                        // The owner's name of repository to store the issues and comments.
+                        owner: 'shinjawkwang',
+                        // The name of repository to store the issues and comments.
+                        repo: 'techArchive',
+                        // The clientId & clientSecret introduced in OAuth2 spec.
+                        clientId: 'b9533f01e91d293c0649',
+                        clientSecret: '6b73673155f1323d8d365c7d8d53ddc3368f0cc1',
+                    },
+                    // globalPagination: true,
                     },
                 ],
              ],

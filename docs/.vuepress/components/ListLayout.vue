@@ -12,7 +12,7 @@
             <meta itemprop="mainEntityOfPage" :content="page.path" />
 
             <header class="ui-post-title" itemprop="name headline">
-            <a :href="page.path">{{ page.title }}</a>
+            <a :href="'/techArchive'+page.path">{{ page.title }}</a>
             </header>
 
             <p class="ui-post-summary" itemprop="description">
