@@ -62,6 +62,7 @@ module.exports = {
                         // The clientId & clientSecret introduced in OAuth2 spec.
                         clientId: 'b9533f01e91d293c0649',
                         clientSecret: '6b73673155f1323d8d365c7d8d53ddc3368f0cc1',
+                        autoCreateIssue: true
                     },
                     // globalPagination: true,
                     },
