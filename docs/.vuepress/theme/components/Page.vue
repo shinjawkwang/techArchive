@@ -3,7 +3,8 @@
     <slot name="top" />
 
     <Content class="theme-default-content" />
-    <Comment/>
+    <Toc/>
+    <Comment :key="renderingKey"/>
     <PageEdit />
 
     <PageNav v-bind="{ sidebarItems }" />
@@ -16,10 +17,22 @@
 import PageEdit from '@theme/components/PageEdit.vue'
 import PageNav from '@theme/components/PageNav.vue'
 import {Comment} from '@vuepress/plugin-blog/lib/client/components'
+import Toc from '@theme/components/Toc.vue'
 
 export default {
-  components: { PageEdit, PageNav, Comment },
-  props: ['sidebarItems']
+  components: { PageEdit, PageNav, Comment, Toc },
+  props: ['sidebarItems'],
+  data() {
+    return {
+      renderingKey: 0,
+    };
+  },
+  methods: {
+    forceRerender() {
+      this.renderingKey += 1;
+      console.log("rerender");
+    }
+  }
 }
 </script>
 

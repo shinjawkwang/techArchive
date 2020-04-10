@@ -19,7 +19,7 @@ module.exports = {
         lineNumbers: true
 	},
 	themeConfig: {
-	    smoothScroll: true,
+        smoothScroll: true,
         sidebar: CONST.sidebar,
     	nav: [
             { text: 'Daily Coding', link: '/daily-coding/' },

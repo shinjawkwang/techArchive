@@ -238,3 +238,17 @@ function resolveItem (item, pages, base, groupDepth = 1) {
     }
   }
 }
+
+export function findContainerInVm(ref, vm, def) {
+  if (!ref) return def;
+  let container;
+  let parent = vm;
+  while ((parent = parent.$parent) && !container) {
+    container = parent.$refs[ref];
+  }
+  // Ensure it's html element (ref could be component)
+  if (container && container.$el) {
+    container = container.$el;
+  }
+  return container || def;
+}

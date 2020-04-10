@@ -23,6 +23,7 @@ for(i in dir) {
         mdList[i][j] = dir[i] + '/' + mdList[i][j];
         sidebarList[i] = {
             title: name[i],
+            sidebarDepth: 0,
             children: mdList[i]
         };
     }
