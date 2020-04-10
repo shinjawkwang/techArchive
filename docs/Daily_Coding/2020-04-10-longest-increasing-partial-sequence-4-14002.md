@@ -1,0 +1,92 @@
+---
+title: 14002. 가장 긴 증가하는 부분수열 4
+date: 2020-04-10
+summary: 수열 A가 주어졌을 때, 가장 긴 증가하는 부분 수열을 구하는 프로그램을 작성하시오. 첫째 줄에 수열 A의 가장 긴 증가하는 부분 수열의 길이를 출력한다. 둘째 줄에는 가장 긴 증가하는 부분 수열을 출력한다. 그러한 수열이 여러가지인 경우 아무거나 출력한다.
+tags:
+    - Dynamic Programming
+    - algorithm
+---
+# 14002. 가장 긴 증가하는 부분수열 4
+## 문제
+
+수열 A가 주어졌을 때, 가장 긴 증가하는 부분 수열을 구하는 프로그램을 작성하시오.
+
+예를 들어, 수열 A = {10, 20, 10, 30, 20, 50} 인 경우에 가장 긴 증가하는 부분 수열은 A = {**10**, **20**, 10, **30**, 20, **50**} 이고, 길이는 4이다.
+
+### 입력
+
+첫째 줄에 수열 A의 크기 N (1 ≤ N ≤ 1,000)이 주어진다.
+
+둘째 줄에는 수열 A를 이루고 있는 Ai가 주어진다. (1 ≤ Ai ≤ 1,000)
+
+### 출력
+
+첫째 줄에 수열 A의 가장 긴 증가하는 부분 수열의 길이를 출력한다.
+
+둘째 줄에는 가장 긴 증가하는 부분 수열을 출력한다. 그러한 수열이 여러가지인 경우 아무거나 출력한다.
+
+## Overview
+
+처음엔 간단한 조건 하나로 문제를 굉장히 어렵게 만들었다는 생각이 들었다. [11053번](/daily-coding/2020/04/05/longest-increasing-partial-sequence-11053)의 점화식을 새로 짜야 하나.. 란 생각을 하며 앞 코드를 다시 바라보니, 간단하게 수열을 알아낼 수 있는 방법이 있었다.
+
+어차피 수열의 각 수에서 가장 긴 수열을 탐색할 때 이전 수를 방문하므로, 우리는 마지막으로 방문했던 수를 안다. 단지 필요하지 않아서 저장하지 않았을 뿐. dp에 column을 하나 추가해 이전 수의 인덱스를 저장하면 되는 일이다.
+
+## first solution
+```cpp
+#include <stdio.h>
+
+int dp[1001][2];
+int num[1001];
+int ans[1001];
+
+int main() {
+    int n, biggest, idx;
+    scanf("%d", &n);
+    for(int i=1; i<=n; i++)
+        scanf("%d", num+i);
+    dp[1][0] = 1;
+    for(int i=2; i<=n; i++) {
+        biggest = 0;
+        for(int j=i-1; j>0; j--) {
+            if(num[i] > num[j]) {
+                if(biggest < dp[j][0]) {
+                    biggest = dp[j][0];
+                    dp[i][1] = j;
+                }
+            }
+        }
+        dp[i][0] = biggest+1;
+    }
+    biggest = dp[1][0];
+    idx = 1;
+    for(int i=2; i<=n; i++) {
+        if(biggest < dp[i][0]) {
+            biggest = dp[i][0];
+            idx = i;
+        }
+    }
+    for(int i=biggest; i>=1; i--) {
+        ans[i] = num[idx];
+        idx = dp[idx][1];
+    }
+    
+    printf("%d\n", biggest);
+    for(int i=1; i<=biggest; i++)
+        printf("%d ", ans[i]);
+    printf("\n");
+    return 0;
+}
+```
+
+가장 긴 수열의 길이를 알아낸 다음, 이 만큼 역추적하며 가장 긴 수열을 `ans`에 저장했다.
+
+### 결과
+
+`맞았습니다!!`
+
+## Conclusion
+
+앞 문제를 이미 푼 사람이라면, `Gold 4`라는 난이도는 다소 높게 책정된 난이도일 수 있다. 점화식을 잘 짜둬서 편하게 풀 수 있던 문제다.
+
+## 최종코드
+[github](https://github.com/shinjawkwang/bojPractice/blob/master/dynamic_programming/14002.cpp)
