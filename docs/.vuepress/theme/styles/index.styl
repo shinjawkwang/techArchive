@@ -17,8 +17,13 @@ body
   font-size 16px
   color $textColor
 
-.page
-  padding-left $sidebarWidth
+/*.page
+  margin-left $sidebarWidth
+  margin-right auto*/
+@media screen and (max-width: 1450px) and (min-width: 1300px)
+  .page
+    margin-left $sidebarWidth
+    margin-right $sidebarWidth
 
 .navbar
   position fixed
@@ -45,6 +50,8 @@ body
   background-color #fff
   width $sidebarWidth
   position fixed
+  transform translateX(-100%)
+  transition transform .2s ease
   z-index 10
   margin 0
   top $navbarHeight
@@ -180,6 +187,8 @@ th, td
   &.sidebar-open
     .sidebar-mask
       display: block
+    .sidebar
+      transform translateX(0)
 
   &.no-navbar
     {$contentClass}:not(.custom) > h1, h2, h3, h4, h5, h6
