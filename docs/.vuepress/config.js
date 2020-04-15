@@ -9,6 +9,7 @@ module.exports = {
 	description: 'personal technology wiki',
     base: "/techArchive/",
     dest: "build",
+    port: 8000,
     head: [
         ['link', { rel: "shortcut icon", href: "/favicon.ico"}],
     ],
