@@ -17,9 +17,6 @@
         {{ resolvedDate }}
       </time>
     </div>
-    <ul v-if="tags" class="post-meta-tags" itemprop="keywords">
-      <PostTag v-for="tag in resolvedTags" :key="tag" :tag="tag" />
-    </ul>
   </div>
 </template>
 

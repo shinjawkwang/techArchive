@@ -29,7 +29,7 @@
 
     <Home v-if="$page.frontmatter.home" />
     <ListLayout v-else-if="$pagination"/>
-    <Page
+    <Post
       v-else
       :sidebar-items="sidebarItems"
     >
@@ -39,14 +39,14 @@
       <template #bottom>
         <slot name="page-bottom" />
       </template>
-    </Page>
+    </Post>
   </div>
 </template>
 
 <script>
 import Home from '@theme/components/Home.vue'
 import Navbar from '@theme/components/Navbar.vue'
-import Page from '@theme/components/Page.vue'
+import Post from '@theme/components/Post.vue'
 import Sidebar from '@theme/components/Sidebar.vue'
 import { resolveSidebarItems } from '../util'
 
@@ -55,7 +55,7 @@ export default {
 
   components: {
     Home,
-    Page,
+    Post,
     Sidebar,
     Navbar
   },

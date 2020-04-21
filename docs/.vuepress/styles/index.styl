@@ -34,12 +34,23 @@
 }
 
 /* main articles */
+.theme-default-content {
+	padding-left: 0 !important
+	padding-right: 0 !important
+}
+@media screen and (max-width: 750px) {
+	.page {
+		padding-left: 1rem !important
+		padding-right: 1rem !important
+	}
+}
 .page h1 {
 	font-family: 'Gugi', 'Pacifico', cursive;
 	font-size: 56px;
 	padding-bottom: 3%;
-  border-bottom: 12px solid #f8ba05;
-  border-bottom-right-radius: 15%;
+	border-bottom: 12px solid #f8ba05;
+	border-bottom-right-radius: 15%;
+	margin-block-end: 1.5rem;
 }
 .octicon .octicon-link {
 	color: #283f69 !important;
@@ -49,7 +60,12 @@ a.header-anchor {
 	padding-right: 0 !important;
 }
 
-/* comment */
+/* footer contents */
+.post-meta-tags {
+	margin-left: auto !important 
+	margin-right: auto !important
+	max-width: 740px
+}
 .vssue {
     max-width: 740px;
     margin: 0 auto;
