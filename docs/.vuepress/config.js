@@ -5,7 +5,7 @@ var octicons = require('octicons');
 console.log(CONST);
 
 module.exports = {
- 	title: 'JK\'s Tech Archive',
+    title: 'JK\'s Tech Archive',
 	description: 'personal technology wiki',
     base: "/techArchive/",
     dest: "build",
@@ -65,7 +65,23 @@ module.exports = {
                         clientSecret: '6b73673155f1323d8d365c7d8d53ddc3368f0cc1',
                         autoCreateIssue: true
                     },
-                    // globalPagination: true,
+                    frontmatters: [
+                        {
+                            // Unique ID of current classification
+                            id: 'tag',
+                            // Decide that the frontmatter keys will be grouped under this classification
+                            keys: ['tags'],
+                            // Path of the `entry page` (or `list page`)
+                            path: '/tag/',
+                            // Layout of the `entry page`
+                            layout: 'Tags',
+                            // Layout of the `scope page`
+                            scopeLayout: 'Tag',
+                            pagination: {
+                                lengthPerPage: 50,
+                            },
+                        },
+                    ]
                     },
                 ],
              ],
