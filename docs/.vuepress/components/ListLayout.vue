@@ -1,5 +1,6 @@
 <template>
   <div id="base-list-layout">
+    <h1 v-if="$currentTag">#{{$currentTag.key}}</h1>
     <div class="ui-posts" itemscope itemtype="http://schema.org/Blog">
         <article
             v-for="page in $pagination.pages"
@@ -135,6 +136,8 @@ export default {
         width 90%
     padding-top 10%
     margin 0 auto
+h1
+  font-family 'Pacifico', 'Gugi', cursive
 .common-layout
   .content-wrapper
     padding-bottom 80px

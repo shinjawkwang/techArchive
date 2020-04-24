@@ -4,7 +4,7 @@
         #{{ tag.name }}
     </router-link>
     <span class="tag-description">
-    {{ tag.pages.length }}개의 글
+    총 {{ tag.pages.length }}개의 글
     </span>
   </div>
 </template>
