@@ -25,6 +25,7 @@ module.exports = {
     	nav: [
             { text: 'Daily Coding', link: '/daily-coding/' },
             { text: 'Datastructure and Algorithm', link: '/datastructure-algorithm/' },
+            { text: 'Tags', link: '/tag/' },
 			{ text: 'GitHub', link: 'https://github.com/shinjawkwang/' }
 		]
     },
