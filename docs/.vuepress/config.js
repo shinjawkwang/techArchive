@@ -12,6 +12,7 @@ module.exports = {
     port: 8000,
     head: [
         ['link', { rel: "shortcut icon", href: "/favicon.ico"}],
+        ['meta', { name: "google-site-verification", content: "A323fBhZQ96dV9OaQQyRAcCy_YIFxi4PUt0p2HyTdFs"}],
     ],
 	markdown: {
 		anchor: {
